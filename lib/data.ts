@@ -49,7 +49,7 @@ export const STUDIO_METADATA = {
   legalEntity: "PT Aghatis Karya Indonesia",
   tagline: "Independent Game Development",
   statement: "We make worlds. Exploring new ideas, strange places, and meaningful play.",
-  email: "contact@aghatis.studio",
+  email: "hello.aghatis@gmail.com",
   location: "Jakarta — Distributed",
   statusBadge: "ACTIVE PRODUCTION — 2026",
   socials: [
@@ -169,49 +169,6 @@ export const GAMES: GameProject[] = [
     gallery: [
       { caption: "Riddle Grid: Engraved pictograms forming compound associative word puzzles", type: "Core Puzzle Screen" },
       { caption: "Tactile Keyboard: Dark stone letter anagram tiles and hint revelation mechanics", type: "Mobile Interface" },
-    ],
-  },
-  {
-    slug: "obsidian-drift",
-    title: "OBSIDIAN DRIFT",
-    subtitle: "A solitary journey across ash deserts and forgotten glyphs.",
-    codename: "PROJECT DRIFT",
-    status: "Worldbuilding & Visual Bible",
-    genre: "Stylized Narrative Odyssey",
-    platforms: "PC, Consoles",
-    engine: "Unreal Engine 5",
-    releaseYear: "TBA — Concept & Pre-Development",
-    image: "/images/obsidian-drift.jpg",
-    aspectRatio: "16/9",
-    tagline: "The wind carves away everything except the truth.",
-    overview:
-      "A stark visual odyssey across an infinite desert of black volcanic sand under perpetual ash skies. Players guide a solitary nomad deciphering the monumental sundials and magnetic monoliths scattered across the waste to reactivate an ancient atmospheric beacon.",
-    narrativeHook:
-      "In the obsidian dunes, navigation is impossible by compass because the ground itself is magnetic. The only true landmark is the shadow cast by the spire when the sun breaks through the haze.",
-    designPillars: [
-      {
-        num: "01",
-        title: "Minimalist Geometry",
-        description:
-          "High contrast compositions between dark charcoal earth, pale limestone ash skies, and polished basalt slabs reflecting golden ambient light.",
-      },
-      {
-        num: "02",
-        title: "Pacing & Negative Space",
-        description:
-          "Unapologetic expansiveness. Vast horizons that allow players to breathe and absorb the weight of scale without artificial distraction.",
-      },
-    ],
-    technicalSpecs: [
-      { label: "Target Platforms", value: "PC & Consoles" },
-      { label: "Art Direction", value: "Editorial minimalism, high-contrast monochrome with ochre accents" },
-      { label: "Production Phase", value: "World bible, environmental tone explorations" },
-    ],
-    developmentNotes: [
-      "Inspired by the black sand deserts of Vik, Iceland and the sparse cinematic compositions of Tarkovsky.",
-    ],
-    gallery: [
-      { caption: "The Monolith of the North Wind half-submerged in volcanic silt", type: "Environment Concept" },
     ],
   },
 ];

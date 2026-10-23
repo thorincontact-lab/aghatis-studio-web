@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { STUDIO_METADATA } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Privacy Notice — Aghatis Studio",
@@ -56,7 +57,14 @@ export default function PrivacyPage() {
             03. Direct Correspondence
           </h2>
           <p>
-            If you choose to transmit an email to contact@aghatis.studio, your message, email address, and name will be retained only as necessary to engage in conversation or evaluate professional collaboration. We never sell or share contact details with advertisers.
+            If you choose to transmit an email to{" "}
+            <a
+              href={`mailto:${STUDIO_METADATA.email}`}
+              className="text-[#F0F0EC] underline decoration-[#333] hover:decoration-[#F0F0EC] transition-colors"
+            >
+              {STUDIO_METADATA.email}
+            </a>
+            , your message, email address, and name will be retained only as necessary to engage in conversation or evaluate professional collaboration. We never sell or share contact details with advertisers.
           </p>
         </section>
 
@@ -65,7 +73,14 @@ export default function PrivacyPage() {
             04. Inquiries
           </h2>
           <p>
-            For any questions regarding our data practices or to request deletion of past email correspondence, please contact contact@aghatis.studio with the subject line &ldquo;Privacy Inquiry.&rdquo;
+            For any questions regarding our data practices or to request deletion of past email correspondence, please contact{" "}
+            <a
+              href={`mailto:${STUDIO_METADATA.email}?subject=Privacy%20Inquiry`}
+              className="text-[#F0F0EC] underline decoration-[#333] hover:decoration-[#F0F0EC] transition-colors"
+            >
+              {STUDIO_METADATA.email}
+            </a>{" "}
+            with the subject line &ldquo;Privacy Inquiry.&rdquo;
           </p>
         </section>
       </div>

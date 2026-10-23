@@ -6,7 +6,7 @@ import Link from "next/link";
 import { GAMES } from "@/lib/data";
 
 export function SelectedWork() {
-  const [project1, project2, project3] = GAMES;
+  const [project1, project2] = GAMES;
 
   return (
     <section id="games" className="py-24 md:py-36 px-6 sm:px-8 lg:px-12 border-b border-[#292929]">
@@ -22,7 +22,7 @@ export function SelectedWork() {
             </h2>
           </div>
           <div className="text-xs font-mono text-[#777] max-w-xs text-left sm:text-right">
-            <span>[ 03 ACTIVE TITLES IN PRE-PRODUCTION & PROTOTYPING ]</span>
+            <span>[ 02 ACTIVE TITLES IN PRODUCTION & PROTOTYPING ]</span>
           </div>
         </div>
 
@@ -134,48 +134,6 @@ export function SelectedWork() {
                 </div>
               </div>
             </div>
-          </article>
-
-          {/* Project 3: Wide Atmospheric Banner (Volcanic Desert Odyssey) */}
-          <article className="group">
-            <Link href={`/games/${project3.slug}`} className="block">
-              <div className="relative aspect-[21/9] sm:aspect-[16/7] min-h-[240px] sm:min-h-[360px] w-full overflow-hidden bg-[#141414] border border-[#292929]">
-                <Image
-                  src={project3.image}
-                  alt={project3.title}
-                  fill
-                  sizes="(max-width: 1280px) 100vw, 1280px"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
-                />
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 px-3 py-1.5 bg-[#0C0C0C]/85 backdrop-blur-sm border border-[#292929] text-[11px] font-mono text-[#F0F0EC]">
-                  {project3.status}
-                </div>
-              </div>
-
-              <div className="pt-8 grid grid-cols-1 md:grid-cols-12 gap-6 items-baseline">
-                <div className="md:col-span-5">
-                  <div className="text-xs font-mono text-[#92928D] tracking-wider uppercase mb-1">
-                    03 / {project3.genre}
-                  </div>
-                  <h3 className="text-3xl sm:text-4xl font-normal tracking-tight text-[#F0F0EC] group-hover:text-white transition-colors">
-                    {project3.title}
-                  </h3>
-                </div>
-
-                <div className="md:col-span-5">
-                  <p className="text-sm sm:text-base text-[#92928D] font-light leading-relaxed">
-                    {project3.overview}
-                  </p>
-                </div>
-
-                <div className="md:col-span-2 flex justify-start md:justify-end">
-                  <span className="inline-flex items-center space-x-1 text-xs font-mono tracking-widest uppercase text-[#F0F0EC] border-b border-[#F0F0EC] pb-1 group-hover:translate-x-1 transition-transform">
-                    <span>View Concept Bible</span>
-                    <span>↗</span>
-                  </span>
-                </div>
-              </div>
-            </Link>
           </article>
         </div>
       </div>

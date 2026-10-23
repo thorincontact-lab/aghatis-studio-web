@@ -24,7 +24,7 @@ export default function GamesIndexPage() {
             <span className="text-[#F0F0EC] uppercase">Selected Work</span>
           </div>
           <div className="text-[#92928D]">
-            03 TITLES IN ACTIVE PRE-PRODUCTION & PROTOTYPING
+            02 TITLES IN ACTIVE PRODUCTION & PROTOTYPING
           </div>
         </div>
       </div>
