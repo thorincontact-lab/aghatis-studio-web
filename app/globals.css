@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-main: #0C0C0C;
+  --surface-secondary: #141414;
+  --surface-elevated: #1B1B1B;
+  --text-primary: #F0F0EC;
+  --text-secondary: #92928D;
+  --border-subtle: #292929;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-studio-bg: #0C0C0C;
+  --color-studio-surface: #141414;
+  --color-studio-elevated: #1B1B1B;
+  --color-studio-primary: #F0F0EC;
+  --color-studio-muted: #92928D;
+  --color-studio-border: #292929;
+  --font-sans: var(--font-manrope), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background-color: #0C0C0C;
+  color: #F0F0EC;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0C0C0C;
+  color: #F0F0EC;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  selection-background-color: #292929;
+  selection-color: #F0F0EC;
+}
+
+::selection {
+  background: #262626;
+  color: #F0F0EC;
+}
+
+/* Restrained custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0C0C0C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #383838;
+}
+
+/* Subtle focus state */
+:focus-visible {
+  outline: 1px solid #92928D;
+  outline-offset: 2px;
+}
+
+/* Fine hairline utility */
+.border-subtle {
+  border-color: #292929;
+}
+
+/* Monospace tracking utility */
+.meta-tag {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
