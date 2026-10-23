@@ -118,55 +118,57 @@ export const GAMES: GameProject[] = [
     ],
   },
   {
-    slug: "kinetic-tides",
-    title: "KINETIC TIDES",
-    subtitle: "Brutalist marine observation at the edge of tidal collapse.",
-    codename: "PROJECT AEON",
-    status: "Systems & Mechanics Prototyping",
-    genre: "Speculative Physics Adventure",
-    platforms: "PC (Steam)",
-    engine: "Unreal Engine 5 / Custom Fluid Solvers",
-    releaseYear: "TBA — In Prototyping",
-    image: "/images/kinetic-tides.jpg",
+    slug: "tebak-icon",
+    title: "TEBAK ICON",
+    subtitle: "A minimalist Android word trivia game deciphering phrases from icon combinations.",
+    codename: "PROJECT GLYPH",
+    status: "In Active Development / Android Beta",
+    genre: "Word Trivia / Visual Puzzle",
+    platforms: "Android (Google Play)",
+    engine: "Custom Lightweight Puzzle Architecture",
+    releaseYear: "2026 — In Active Beta",
+    image: "/images/tebak-icon.jpg",
     aspectRatio: "16/9",
-    tagline: "Observe the ocean. Maintain the station. Listen to what rises with the tide.",
+    tagline: "Read between the symbols. Decode the hidden word.",
     overview:
-      "Perched atop the wave-swept cliffs of a sub-polar archipelago, Kinetic Tides casts the player as the sole caretaker of a brutalist seismic observatory. As tidal gravity surges beyond predicted models, players must balance station calibration, kinetic water pumps, and field excursions across tide-locked rocky shelves to decipher an anomalous planetary rhythm.",
+      "Tebak Icon is a sleek, distraction-free Android trivia puzzle application developed by Aghatis Studio. Players deduce colloquial words, cultural idioms, compound phrases, and popular trivia from clever combinations of minimalist icons and pictograms. Built with restrained typography, tactile haptic feedback, and a clean monochromatic dark interface, Tebak Icon offers hundreds of offline-ready brainteasers free from intrusive ad interruptions.",
     narrativeHook:
-      "The observatory was built to last three centuries. Its concrete walls are three meters thick. Yet every night at lunar apogee, the water rises four inches higher than the physical laws of the basin permit.",
+      "A key + an eye + an hourglass. Is it 'Rahasia'? Or 'Kunci Waktu'? In Tebak Icon, associative lateral thinking and vocabulary take precedence over brute-force guessing.",
     designPillars: [
       {
         num: "01",
-        title: "Physical Tide Dynamics",
+        title: "Associative Iconography",
         description:
-          "Tides are not cosmetic animations; they are real-time hydrostatic simulations that flood lower walkways, power hydrostatic generators, and dictate windows of exterior transit.",
+          "Hand-crafted symbol combinations engineered around linguistic semantics, cultural idioms, and clever lateral associations rather than simplistic literal translations.",
       },
       {
         num: "02",
-        title: "Industrial Tactility",
+        title: "Distraction-Free Zen Interface",
         description:
-          "Every valve, pneumatic latch, and CRT oscilloscope has mechanical weight, audible relays, and predictable physical thresholds.",
+          "A refined, dark editorial UI free from aggressive banner pop-ups or casino-style flashing rewards. Focus is placed entirely on the elegance of the riddle.",
       },
       {
         num: "03",
-        title: "Planetary Indifference",
+        title: "Tactile Haptics & Offline First",
         description:
-          "The narrative explores human fragility in the face of planetary-scale geological shifts. Atmospheric, contemplative, and deeply cinematic.",
+          "Built on a lightweight architecture with sub-400ms startup times, smooth vibration feedback on letter tile placements, and complete offline availability.",
       },
     ],
     technicalSpecs: [
-      { label: "Target Platforms", value: "PC (Steam)" },
-      { label: "Physics Middleware", value: "Custom hydrostatic mesh interaction solver" },
-      { label: "Visual Style", value: "Monochrome architectural brutalism with natural slate & cold ocean hues" },
-      { label: "Production Phase", value: "Sub-station mechanical gameplay loop validation" },
+      { label: "Target Platforms", value: "Android (Google Play Store)" },
+      { label: "Architecture", value: "Custom lightweight puzzle state engine & dynamic hint solver" },
+      { label: "UI / Art Direction", value: "Monochrome dark mode, tactile stone glyph tiles & crisp vector iconography" },
+      { label: "Production Phase", value: "Level progression authoring, localized riddle sets & Android Closed Beta" },
+      { label: "Input Design", value: "One-thumb vertical touch layout with custom haptic vibration feedback" },
     ],
     developmentNotes: [
-      "Water is treated as both an obstacle and a power grid component.",
-      "The concrete architecture draws direct inspiration from St. Peter's Seminary and cold-war coastal radar towers.",
+      "Every icon combination is tested across multiple player demographics to eliminate frustrating ambiguity while preserving genuine eureka moments.",
+      "The application package size is kept strictly under 25MB for lightning-fast installation on any Android device.",
+      "Sound design relies on subtle wooden tile clacks and low-frequency resonance rather than loud, fatigue-inducing chimes.",
     ],
     gallery: [
-      { caption: "Station Gantry at low tide, cantilevered over basalt rock shelf", type: "Architectural Exterior" },
-      { caption: "Main Control Room: Dual oscilloscope readouts and mechanical pressure levers", type: "Interior System" },
+      { caption: "Riddle Grid: Engraved pictograms forming compound associative word puzzles", type: "Core Puzzle Screen" },
+      { caption: "Tactile Keyboard: Dark stone letter anagram tiles and hint revelation mechanics", type: "Mobile Interface" },
     ],
   },
   {
@@ -238,25 +240,25 @@ export const JOURNAL_POSTS: JournalPost[] = [
     },
   },
   {
-    slug: "building-tactile-physics",
-    title: "Designing Physical Weight in Low-Gravity Environments",
+    slug: "tactile-word-puzzle-design",
+    title: "Designing Tactile Micro-Interactions in Mobile Word Puzzles",
     date: "September 02, 2026",
-    category: "Systems & Engineering",
-    readTime: "8 min read",
+    category: "Mobile UX & Interaction",
+    readTime: "6 min read",
     excerpt:
-      "A breakdown of our inertia model in Kinetic Tides: giving mechanical equipment tangible resistance without frustrating player agency.",
+      "Why standard mobile trivia feels hollow with generic tap sounds, and how we engineered physical weight into letter tile interactions in Tebak Icon.",
     content: {
       lead:
-        "When an interactive object feels 'floaty,' players rarely blame the visual model. They blame the feedback loop between their fingers and the screen.",
+        "When a player taps a flat glass smartphone screen, their subconscious expectation is frequently disappointed by floaty, disconnected feedback.",
       paragraphs: [
-        "In Kinetic Tides, the player is managing cold-weather industrial machinery: cast-iron valve wheels, hydraulic gate levers, and magnetic cable winches. These machines were built fifty years before the game begins, designed to withstand saline spray and sub-zero gales.",
-        "To convey this in gameplay without resorting to tedious quick-time events, we implemented an analog resistance curve on all rotary and linear interactions. When you begin turning a frozen valve, the initial rotational velocity is low, accompanied by the mechanical rattle of gears engaging. As momentum builds, the resistance drops slightly, before encountering the hard stop of the valve seat.",
-        "Coupling this with directional haptics and acoustic resonance turns an ordinary interaction into a physical sensation. You do not merely press a button to open a floodgate; you physically haul open a steel gate against the hydrostatic pressure of the incoming tide.",
+        "In the mobile puzzle genre, interaction design is often treated as an afterthought. Buttons flash with oversaturated gradients, reward screens trigger obnoxious fanfare, and tile taps produce generic synthesizer bleeps that wear out the player's patience within ten minutes.",
+        "With Tebak Icon, we took the opposite approach: crafting an experience closer to playing with real stone tiles and wooden Scrabble pieces. When you tap a letter tile to submit an answer, the phone emits a precise, low-frequency 15ms haptic pulse paired with an acoustic recording of a slate stone settling onto a surface.",
+        "This micro-latency physical feedback grounds the riddle. The player is not merely navigating an ad-monetized mobile form; they are manipulating tactile glyphs in a quiet, focused headspace.",
       ],
       pullQuote:
-        "Tactility in digital spaces is the art of making pixels feel like they have mass, friction, and resistance to human will.",
+        "Tactility in mobile interfaces is the discipline of making a flat piece of glass feel like an instrument of thought.",
       conclusion:
-        "Our goal is to create interfaces that feel diegetic, honest, and satisfying to touch. We want every lever in the observatory to feel like it will still be working long after the story ends.",
+        "By treating mobile trivia with the same design rigor and acoustic restraint as our larger titles, we create games that players keep on their devices for years.",
     },
   },
   {
