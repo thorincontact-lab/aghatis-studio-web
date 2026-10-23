@@ -1,13 +1,37 @@
+const fs = require("fs");
+const path = require("path");
+const { execSync } = require("child_process");
+
+// 1. Pastikan dependensi node_modules terinstall
+if (!fs.existsSync(path.join(__dirname, "node_modules"))) {
+  console.log("> [AGHATIS] node_modules tidak ditemukan. Menginstall dependencies...");
+  try {
+    execSync("npm install", { stdio: "inherit", cwd: __dirname });
+  } catch (err) {
+    console.error("> [AGHATIS] Gagal npm install:", err);
+  }
+}
+
+// 2. Pastikan Next.js sudah di-build (.next folder)
+if (!fs.existsSync(path.join(__dirname, ".next"))) {
+  console.log("> [AGHATIS] Folder build .next tidak ditemukan. Menjalankan build otomatis...");
+  try {
+    execSync("npx next build", { stdio: "inherit", cwd: __dirname });
+  } catch (err) {
+    console.error("> [AGHATIS] Gagal build:", err);
+  }
+}
+
+// 3. Jalankan server Next.js production
 const { createServer } = require("http");
 const { parse } = require("url");
 const next = require("next");
 
-const dev = process.env.NODE_ENV !== "production";
+const dev = false;
 const hostname = "0.0.0.0";
-// Pterodactyl binds port via SERVER_PORT or PORT environment variable
 const port = parseInt(process.env.SERVER_PORT || process.env.PORT || "3000", 10);
 
-const app = next({ dev, hostname, port });
+const app = next({ dev, hostname, port, dir: __dirname });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
